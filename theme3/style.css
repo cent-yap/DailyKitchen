@@ -230,7 +230,6 @@ a {
     justify-content: center;
     flex-direction: column;
     gap: 20px;
-    padding: 20px;
     overflow: hidden;
     height: fit-content;
     width: calc(100% - 150px);
@@ -272,7 +271,7 @@ a {
     text-justify: distribute-all-lines;
   }
 
-  .hey .jd{
+  .hey .og{
     display: flex;
     position: relative;
     align-items: center;
@@ -281,7 +280,28 @@ a {
     width: 100%;
   }
 
+  .og h2{
+    font-size: 3rem;
+    color: crimson;
+    text-decoration: line-through;
+  }
+
+  .hey .jd{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    height: fit-content;
+    width: 100%;
+  }
+
+.jd h2{
+  font-size: 2.5rem;
+  color: aliceblue;
+}
+
 .jd .me i{
-   font-size: 4rem;
-   color: aliceblue;
+   font-size: 3rem;
+   color: gold;
 }
