@@ -1,0 +1,332 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Fjalla+One&family=Luckiest+Guy&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Fjalla+One&family=Luckiest+Guy&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  min-height: 100dvh;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+  .head{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    overflow: hidden;
+    background: #0b090a;
+    min-height: 4.3em;
+    min-width: 1300px;
+    width: 100%;
+}
+
+.navy{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 0 20px;
+    height: fit-content;
+    width: 100%;
+}
+
+.navy .logo{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 70px;
+    width: max-content;
+}
+
+.logo h1{
+    color: aliceblue;
+    font-family: "Cookie", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-wrap: nowrap;
+    background: linear-gradient(to right, #e9edc9, #edddd4, #fefae0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition-timing-function: linear;
+    animation: animated 3s linear infinite;
+    color: transparent;
+}
+
+@keyframes animated{
+    to{background-position-x: 500px;}
+  }
+
+.navy .align{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 25px 0;
+    outline: 2px outset #cccc;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    border-radius: 50px;
+    height: 50px;
+    width: 550px;
+}
+
+.align .hey{
+    list-style: none;
+}
+
+.align .hey a{
+    font-size: 1.1rem;
+    color: aliceblue;
+}
+
+.align .hey a.active{
+   font-weight: 700;
+   color: #e8f1f2;
+   border-bottom: 2px inset #283618;
+}
+
+.align .hey a.use:not(a.active):hover{
+    color: #dee2ff;
+    font-weight: 600;
+}
+
+
+.navy .option{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 70px;
+    width: max-content;
+}
+
+.option .btn{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: #0b090a;
+    cursor: pointer;
+    background: #faf9f9;
+    outline: 2px outset #ccc;
+    overflow: hidden;
+    transition: all 0.2s;
+    width: max-content;
+  }
+
+  .option .btn::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    height: 100%;
+    width: 100%;
+    background: #283618;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+  }
+
+  .option .btn:hover::before{
+   position: absolute;
+   right: 0;
+  }
+ 
+  .option .btn:active {
+    background: unset;
+    color: #0b090a;
+    transform: scale(.9);
+  }
+
+  .option a{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0b090a;
+    z-index: 2;
+  }
+
+  .option a:hover{
+    color: aliceblue;
+  }
+
+  .option i{
+    font-size: 1.2rem;
+  }
+
+  .gallery{
+    display: grid;
+    position: relative;
+    place-items: center;
+    background-image: url(https://aleamodular.com/wp-content/uploads/2022/07/modular-kitchen-chimney-scaled.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 50px 0;
+    min-height: 100dvh;
+    min-width: 1300px;
+    width: 100%;
+  }
+
+  .gallery::before{
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 100%;
+    border-image:  fill 0 linear-gradient(#0009, #0009);
+  }
+
+  .gallery .control{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 40px;
+    gap: 40px;
+    height: fit-content;
+    width: 100%;
+  }
+
+  .control .ery{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: flex-start;
+    height: fit-content;
+    width: 100%;
+  }
+
+  .ery h1{
+    color: aliceblue;
+    position: relative;
+    font-size: 3rem;
+    font-weight: 800;
+  }
+
+  .ery h1::after{
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 1px aliceblue;
+    color: transparent;
+  }
+
+  .control .wl{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: nowrap;
+    height: 700px;
+    width: 100%;
+  }
+
+  .wl .box{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 500px;
+    width: 400px;
+
+  }
+
+  .wl .box:nth-of-type(1){
+    background: url(https://m.media-amazon.com/images/I/91r2aGIAXqL.jpg) center / cover no-repeat;
+    transform: translateY(-100px);
+  }
+  .wl .box:nth-of-type(2){
+    background: url(https://insideguide.co.za/cape-town/app/uploads/2023/12/weylandts-outdoor-furniture.webp) center / cover no-repeat;
+    transform: translateY(-50px);
+  }
+  .wl .box:nth-of-type(3){
+    background: url(https://m.media-amazon.com/images/I/71X4KaeWX3L._AC_SL1000_.jpg) center / cover no-repeat;
+    transform: translateY(0);
+  }
+
+  .wl .ja{
+    display: flex;
+    position: absolute;
+    bottom: 100px;
+    align-items: center;
+    justify-content: flex-start;
+    height: fit-content;
+    width: 100%;
+  }
+
+  .ja h3{
+    font-size: 1.5rem;
+    color: aliceblue;
+  }
+
+  .control .gda{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 500px;
+    width: 100%;
+  }
+
+  .gda .sh{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 500px;
+    width: 100%;
+  }
+
+  .gda .sh:nth-of-type(1){
+    background: url(https://dynamicgroupplus.com/wp-content/uploads/dynamicgroup_kitchen_1500_1000-73-1.jpg) center / cover no-repeat;
+    transform: translateY(-100px);
+  }
+  .gda .sh:nth-of-type(2){
+    background: url(https://www.cnet.com/a/img/resize/9baeb7cf758396f031db1081196ad1c2b360e855/hub/2019/03/14/2609b0eb-1263-43e2-9380-c1f8cbced873/gettyimages-1089101352.jpg?auto=webp&fit=crop&height=900&width=1200) center / cover no-repeat;
+    transform: translateY(0px);
+  }
+
+  .gda .cv{
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    align-items: center;
+    justify-content: flex-start;
+    height: fit-content;
+    width: 100%;
+  }
+
+  .cv h3{
+    font-size: 1.5rem;
+    color: aliceblue;
+  }
