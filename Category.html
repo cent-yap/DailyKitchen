@@ -1,722 +1,148 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Fjalla+One&family=Luckiest+Guy&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Fjalla+One&family=Luckiest+Guy&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+<!DOCTYPE html>
+<html lang="en">
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
-}
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" type="x-icon" href="img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CATEGORY</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/eksell-display-trial">
+    <link rel="stylesheet" href="theme1/style.css">
+  </head>
 
-html, body {
-  scroll-behavior: smooth;
-  min-height: 100dvh;
-  width: 100%;
-}
+  <body>
 
-a {
-  text-decoration: none;
-}
-
-.head{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    overflow: hidden;
-    background: #0b090a;
-    min-height: 4.3em;
-    min-width: 1300px;
-    width: 100%;
-}
-
-.navy{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 0 20px;
-    height: fit-content;
-    width: 100%;
-}
-
-.navy .logo{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    height: 70px;
-    width: max-content;
-}
-
-.logo h1{
-    color: aliceblue;
-    font-family: "Cookie", sans-serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-wrap: nowrap;
-    background: linear-gradient(to right, #e9edc9, #edddd4, #fefae0);
-    background-clip: text;
-    -webkit-background-clip: text;
-    transition-timing-function: linear;
-    animation: animated 3s linear infinite;
-    color: transparent;
-}
-
-@keyframes animated{
-    to{background-position-x: 500px;}
-  }
-
-.navy .align{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 25px 0;
-    outline: 2px outset #cccc;
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
-    border-radius: 50px;
-    height: 50px;
-    width: 550px;
-}
-
-.align .hey{
-    list-style: none;
-}
-
-.align .hey a{
-    font-size: 1.1rem;
-    color: aliceblue;
-}
-
-.align .hey a.active{
-   font-weight: 700;
-   color: #e8f1f2;
-   border-bottom: 2px inset #283618;
-}
-
-.align .hey a.use:not(a.active):hover{
-    color: #dee2ff;
-    font-weight: 600;
-}
-
-
-.navy .option{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 70px;
-    width: max-content;
-}
-
-.option .btn{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    border-radius: 12px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    color: #0b090a;
-    cursor: pointer;
-    background: #faf9f9;
-    outline: 2px outset #ccc;
-    overflow: hidden;
-    transition: all 0.2s;
-    width: max-content;
-  }
-
-  .option .btn::before{
-    content:'';
-    position: absolute;
-    top: 0;
-    right: 100%;
-    height: 100%;
-    width: 100%;
-    background: #283618;
-    transition: 0.3s ease-in-out;
-    overflow: hidden;
-  }
-
-  .option .btn:hover::before{
-   position: absolute;
-   right: 0;
-  }
- 
-  .option .btn:active {
-    background: unset;
-    color: #0b090a;
-    transform: scale(.9);
-  }
-
-  .option a{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    padding: 8px 12px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #0b090a;
-    z-index: 2;
-  }
-
-  .option a:hover{
-    color: aliceblue;
-  }
-
-  .option i{
-    font-size: 1.2rem;
-  }
-
-  .cat{
-    display: grid;
-    position: relative;
-    place-items: center;
-    padding: 50px 0;
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
-    min-height: 100dvh;
-    min-width: 1300px;
-    width: 100%;
-  }
-
-  .cat .col{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    padding: 20px;
-    height: fit-content;
-    width: 100%;
-  }
-
-  .col .jg{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    height: fit-content;
-    width: 100%;
-  }
-
-  .jg h1{
-    position: relative;
-    font-size: 3rem;
-    font-weight: 800;
-    color: #0b090a;
-    animation: clip-path-reveal-1 3s ease infinite alternate;
-  }
-
-  @keyframes line-animation {
-    0% { transform: scaleX( 0 ); }
-    15% { transform: scaleX( 0 ); }
-    20%, 25% { transform: scaleX( 1 ); top: calc( 100% - 2px ); }
-    50% { transform: scaleX( 1 ); top: 0px; }
-    70% { transform: scaleX( 0.2 ); top: 0px; }
-    80%, 100% { transform: scaleX( 0.2 ); top: 0px; }
-    }
+    <header class="head">
+        <nav class="navy">
+          <div class="logo">
+            <h1><strong>D</strong>aily<strong>K</strong>itchen</h1>
+          </div>
     
-    @keyframes clip-path-reveal-1 {
-    0%, 25% { clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%); }
-    50% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
-    }
-
-  .jg h1::after{
-    position: absolute;
-    inset: 0 0 0 0;
-    content: attr(data-content);
-    z-index: 2;
-    -webkit-text-stroke: 1px #0b090a;
-    color: transparent;
-  }
-
-  .jg .vc{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .vc i{
-    font-size: 3rem;
-  }
-
-  .vc i:nth-of-type(1):hover{
-    color: crimson;
-  }
-
-  .vc i:nth-of-type(2):hover{
-    color: #003049;
-  }
-
-  .col .sel{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 20px;
-    height: fit-content;
-    width: 100%;
-  }
-
-  .sel .qp{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 0 20px;
-    height: fit-content;
-    width: 100%;
-  }
-
-  .qp h1{
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #0b090a;
-  }
-
-  .qp i{
-    font-size: 3rem;
-  }
-
-  .sel .pq{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 0;
-    flex-wrap: nowrap;
-    gap: 20px;
-    height: fit-content;
-    width: 100%;
-  }
-
-  .pq .zx{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 10px;
-    height: 350px;
-    width: 360px;
-    overflow: hidden;
-  }
-
-  .pq .zx::before,  .pq .zx1::before,  .pq .zx2::before{
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 100%;
-    border-image:  fill 0 linear-gradient(#0005, #0005);
-  }
-
-  .pq .zx,  .pq .zx1,  .pq .zx2{
-    transition: 0.3s ease-in-out;
-  }
-
-  .pq .zx:hover, .pq .zx1:hover, .pq .zx2:hover{
-   transform: translateY(-5%);
-  }
+          <ul class="align">
+            <li class="hey"><a href="index.html" class="use">Home</a></li>
+            <li class="hey"><a href="Category.html" class="use active">Category</a></li>
+            <li class="hey"><a href="Gallery.html" class="use">Gallery</a></li>
+            <li class="hey"><a href="About.html" class="use">About</a></li>
+          </ul>
+    
+          <div class="option">
+            <button class="btn">
+              <a href="" class="game">Visit Us <i class='bx bx-right-top-arrow-circle'></i></a>
+            </button>
+          </div>
+        </nav>
+    </header>
 
 
-  .zx .wk{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    background: url("../featured/01.png") center / cover no-repeat;
-    padding: 10px;
-    height: 350px;
-    width: 100%;
-  }
+    <section class="cat">
 
-  .zx .wk i, .zx1 .wk i, .zx2 .wk i{
-    display: flex;
-    position: absolute;
-    left: 0;
-    bottom: 20px;
-    font-size: 2.5rem;
-    color: brown;
-    z-index: 3;
-  }
-
-  .zx .wk i:hover, .zx1 .wk i:hover, .zx2 .wk i:hover{
-    color: aliceblue;
-  }
-
-  .pq .zx1{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 10px;
-    height: 350px;
-    width: 360px;
-    overflow: hidden;
-  }
-
-  .zx1 .wk{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    background: url("../featured/02.png") center / cover no-repeat;
-    padding: 10px;
-    height: 350px;
-    width: 100%;
-  }
-
-  .pq .zx2{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 10px;
-    height: 350px;
-    width: 360px;
-    overflow: hidden;
-  }
-
-  .zx2 .wk{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    background: url("../featured/03.png") center / cover no-repeat;
-    padding: 10px;
-    height: 350px;
-    width: 100%;
-  }
-
-  .zx .kw{
-    display: flex;
-    position: relative;
-    align-items: flex-start;
-    justify-content: flex-start;
-    background: #283618;
-    padding: 10px;
-    height: 350px;
-    width: calc(100% - 200px);
-  }
-  .zx1 .kw1{
-    display: flex;
-    position: relative;
-    align-items: flex-start;
-    justify-content: flex-start;
-    background: #283618;
-    padding: 10px;
-    height: 350px;
-    width: calc(100% - 200px);
-  }
-  .zx2 .kw2{
-    display: flex;
-    position: relative;
-    align-items: flex-start;
-    justify-content: flex-start;
-    background: #283618;
-    padding: 10px;
-    height: 350px;
-    width: calc(100% - 200px);
-  }
-
-  .kw h1, .kw1 h1, .kw2 h1{
-    color: aliceblue;
-    font-size: 2.1rem;
-    font-weight: 700;
-    writing-mode: sideways-rl;
-  }
-
-
-  .pq .or{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 10px;
-    height: 350px;
-    width: 360px;
-  }
-
-  .pq .or::before,  .pq .or1::before,  .pq .or2::before{
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 100%;
-    border-image:  fill 0 linear-gradient(#0005, #0005);
-  }
-
-  .pq .or,  .pq .or1,  .pq .or2{
-    transition: 0.3s ease-in-out;
-  }
-
-  .pq .or:hover, .pq .or1:hover, .pq .or2:hover{
-   transform: translateY(-5%);
-  }
-
-
-  .or .wk{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    background: url("../featured/04.png") center / cover no-repeat;
-    padding: 10px;
-    height: 350px;
-    width: 100%;
-  }
-
-  .or .wk i, .or1 .wk i, .or2 .wk i{
-    display: flex;
-    position: absolute;
-    left: 0;
-    bottom: 20px;
-    font-size: 2.5rem;
-    color: brown;
-    z-index: 3;
-  }
-
-  .or .wk i:hover, .or1 .wk i:hover, .or2 .wk i:hover{
-    color: aliceblue;
-  }
-
-  .pq .or1{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 10px;
-    height: 350px;
-    width: 360px;
-    overflow: hidden;
-  }
-
-  .or1 .wk{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    background: url("../featured/05.png") center / cover no-repeat;
-    padding: 10px;
-    height: 350px;
-    width: 100%;
-  }
-
-  .pq .or2{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 10px;
-    height: 350px;
-    width: 360px;
-    overflow: hidden;
-  }
-
-  .or2 .wk{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    background: url("../featured/06.png") center / cover no-repeat;
-    padding: 10px;
-    height: 350px;
-    width: 100%;
-  }
-
-  .or .kw{
-    display: flex;
-    position: relative;
-    align-items: flex-start;
-    justify-content: flex-start;
-    background: #283618;
-    padding: 10px;
-    height: 350px;
-    width: calc(100% - 200px);
-  }
-  .or1 .kw1{
-    display: flex;
-    position: relative;
-    align-items: flex-start;
-    justify-content: flex-start;
-    background: #283618;
-    padding: 10px;
-    height: 350px;
-    width: calc(100% - 200px);
-  }
-  .or2 .kw2{
-    display: flex;
-    position: relative;
-    align-items: flex-start;
-    justify-content: flex-start;
-    background: #283618;
-    padding: 10px;
-    height: 350px;
-    width: calc(100% - 200px);
-  }
-
-
-
-  .pq .mb{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 10px;
-    height: 350px;
-    width: 360px;
-  }
-
-  .pq .mb::before,  .pq .mb1::before,  .pq .mb2::before{
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 100%;
-    border-image:  fill 0 linear-gradient(#0005, #0005);
-  }
-
-  .pq .mb,  .pq .mb1,  .pq .mb2{
-    transition: 0.3s ease-in-out;
-  }
-
-  .pq .mb:hover, .pq .mb1:hover, .pq .mb2:hover{
-   transform: translateY(-5%);
-  }
-  
-
-
-  .mb .wk{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    background: url("../featured/07.png") center / cover no-repeat;
-    padding: 10px;
-    height: 350px;
-    width: 100%;
-  }
-
-  .mb .wk i, .mb1 .wk i, .mb2 .wk i{
-    display: flex;
-    position: absolute;
-    left: 0;
-    bottom: 20px;
-    font-size: 2.5rem;
-    color: brown;
-    z-index: 3;
-  }
-
-  .mb .wk i:hover, .mb1 .wk i:hover, .mb2 .wk i:hover{
-    color: aliceblue;
-  }
-
-  .pq .mb1{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 10px;
-    height: 350px;
-    width: 360px;
-    overflow: hidden;
-  }
-
-  .mb1 .wk{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    background: url("../featured/08.png") center / cover no-repeat;
-    padding: 10px;
-    height: 350px;
-    width: 100%;
-  }
-
-  .pq .mb2{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 10px;
-    height: 350px;
-    width: 360px;
-    overflow: hidden;
-  }
-
-  .mb2 .wk{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    background: url("../featured/09.png") center / cover no-repeat;
-    padding: 10px;
-    height: 350px;
-    width: 100%;
-  }
-
-  .mb .kw{
-    display: flex;
-    position: relative;
-    align-items: flex-start;
-    justify-content: flex-start;
-    background: #283618;
-    padding: 10px;
-    height: 350px;
-    width: calc(100% - 200px);
-  }
-  .mb1 .kw1{
-    display: flex;
-    position: relative;
-    align-items: flex-start;
-    justify-content: flex-start;
-    background: #283618;
-    padding: 10px;
-    height: 350px;
-    width: calc(100% - 200px);
-  }
-  .mb2 .kw2{
-    display: flex;
-    position: relative;
-    align-items: flex-start;
-    justify-content: flex-start;
-    background: #283618;
-    padding: 10px;
-    height: 350px;
-    width: calc(100% - 200px);
-  }
+        <div class="col">
+    
+           <div class="jg">
+              <h1 data-content="Category">Category</h1>
+            <div class="vc">
+               <i class='bx bx-heart'></i>
+               <i class='bx bx-like'></i>
+            </div>
+           </div>
+    
+           <div class="sel">
+             <div class="qp">
+              <i class='bx bx-cart-alt'></i> <h1>Appliances</h1>
+             </div>
+             <div class="pq">
+              <div class="zx">
+                <div class="wk">
+                  <a href="#"><i class='bx bx-shopping-bag'></i></a>
+                </div>
+                <div class="kw">
+                  <h1>LG Refrigerator</h1>
+                </div>
+              </div>
+              <div class="zx1">
+                <div class="wk">
+                  <a href="#"><i class='bx bx-shopping-bag'></i></a>
+                </div>
+                <div class="kw1">
+                  <h1>Whirpool Washing Machine</h1>
+                </div>
+              </div>
+              <div class="zx2">
+                <div class="wk">
+                  <a href="#"><i class='bx bx-shopping-bag'></i></a>
+                </div>
+                <div class="kw2">
+                  <h1>Primo Water Despenser</h1>
+                </div>
+              </div>
+             </div>
+          </div>
+    
+          <div class="sel">
+            <div class="qp">
+              <i class='bx bx-cart-alt'></i> <h1>Furnitures</h1>
+            </div>
+            <div class="pq">
+             <div class="or">
+               <div class="wk">
+                <a href="#"><i class='bx bx-shopping-bag'></i></a>
+               </div>
+               <div class="kw">
+                 <h1>Wooden Cabinet</h1>
+               </div>
+             </div>
+             <div class="or1">
+               <div class="wk">
+                <a href="#"><i class='bx bx-shopping-bag'></i></a>
+               </div>
+               <div class="kw1">
+                 <h1>Narra Table</h1>
+               </div>
+             </div>
+             <div class="or2">
+               <div class="wk">
+                <a href="#"><i class='bx bx-shopping-bag'></i></a>
+               </div>
+               <div class="kw2">
+                 <h1>Uratex Mattres</h1>
+               </div>
+             </div>
+            </div>
+         </div>
+    
+         <div class="sel">
+          <div class="qp">
+            <i class='bx bx-cart-alt'></i> <h1>Utensils</h1>
+          </div>
+          <div class="pq">
+           <div class="mb">
+             <div class="wk">
+              <a href="#"><i class='bx bx-shopping-bag'></i></a>
+             </div>
+             <div class="kw">
+               <h1>Bundle Kitchen Tools</h1>
+             </div>
+           </div>
+           <div class="mb1">
+             <div class="wk">
+              <a href="About.html"><i class='bx bx-shopping-bag'></i></a>
+             </div>
+             <div class="kw1">
+               <h1>Set of Knives</h1>
+             </div>
+           </div>
+           <div class="mb2">
+             <div class="wk">
+              <a href="#"><i class='bx bx-shopping-bag'></i></a>
+             </div>
+             <div class="kw2">
+               <h1>Chopping Board</h1>
+             </div>
+           </div>
+          </div>
+       </div>
+    
+        </div>
+    </section>
