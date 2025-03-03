@@ -355,6 +355,10 @@ a {
     z-index: 3;
   }
 
+  .zx .wk i:hover, .zx1 .wk i:hover, .zx2 .wk i:hover{
+    color: aliceblue;
+  }
+
   .pq .zx1{
     display: flex;
     position: relative;
@@ -495,6 +499,10 @@ a {
     z-index: 3;
   }
 
+  .or .wk i:hover, .or1 .wk i:hover, .or2 .wk i:hover{
+    color: aliceblue;
+  }
+
   .pq .or1{
     display: flex;
     position: relative;
@@ -628,6 +636,10 @@ a {
     font-size: 2.5rem;
     color: brown;
     z-index: 3;
+  }
+
+  .mb .wk i:hover, .mb1 .wk i:hover, .mb2 .wk i:hover{
+    color: aliceblue;
   }
 
   .pq .mb1{
